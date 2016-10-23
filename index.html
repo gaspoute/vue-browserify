@@ -6,8 +6,21 @@
   </head>
   <body>
     <div id="app">
-      <app-header></app-header>
+      <nav class="tab-navigation">
+        <ul v-for="tab in tabs">
+          <li @click="selectTab(tab)">{{tab.title}}</li>
+        </ul>
+      </nav>
+      <tab-content :tab="tabs.bob">
+        <bob></bob>
+      </tab-content>
+      <tab-content :tab="tabs.alice">
+        <alice></alice>
+      </tab-content>
+      <tab-content :tab="tabs.oscar">
+        <oscar></oscar>
+      </tab-content>
     </div>
-    <script src="dist/app.bundle.js" charset="utf-8"></script>
+    <script src="dist/app.bundle.js"></script>
   </body>
 </html>

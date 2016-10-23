@@ -7,7 +7,7 @@
   "scripts": {
     "watch:css": "node-sass -w --source-map true styles.scss styles.css ",
     "watch:js": "watchify -vd app/app.js -o dist/app.bundle.js",
-    "sync": "browser-sync start --server --files dist/app.bundle.js styles.css --no-open",
+    "sync": "browser-sync start --server --files index.html styles.css dist/app.bundle.js --no-open",
     "dev": "npm-run-all --parallel watch:* sync"
   },
   "devDependencies": {
